@@ -1,9 +1,17 @@
 <h1>Listing trucks</h1>
 
 <p>
-  Download:
+  <b>Download:</b>
   <%= link_to "CSV", trucks_path(format: "csv") %>
 </p>
+
+  <b>Upload:</b>
+<%= form_tag import_trucks_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
 
 <table>
   <thead>

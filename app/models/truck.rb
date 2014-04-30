@@ -8,4 +8,13 @@ class Truck < ActiveRecord::Base
 	    end
 	  end
 	end
+
+	def self.import(file)
+		CSV.foreach(file.path, headers: true) do |row|
+			trucks = find_by_id(row["id"]) || new
+			trucks.attributes = row.to_hash.slice!("id", "created_at", "updated_at")
+			trucks.save!
+		end
+	end
+
 end
