@@ -1,6 +1,8 @@
 class TrucksController < ApplicationController
   before_action :set_truck, only: [:show, :edit, :update, :destroy]
 
+  layout false
+
   def import
     Truck.import(params[:file])
     redirect_to trucks_path, notice: "Products imported."

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'dashboard/overview'
+
+  get 'dashboard/pit_controller'
+
+  get 'dashboard/optimisation'
+
+  get 'dashboard/driver'
+
   get 'welcome/index'
 
   resources :trucks do

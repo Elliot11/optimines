@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Optimines</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -9,14 +11,24 @@
 <body>
 
 <%# For Debugging %>
-<% if Rails.env == "development" %>
+
+<% if params[:controller] == "dashboard" %>
+	<%= render 'layouts/navigation' %>
+<% end %>
+
+<div id="page-wrapper">
+	<% if Rails.env == "development" %>
    <%= params %>
    <br>
    <%= session %>
 <% end %>
 <p id="notice"><%= notice %></p>
 <p id="alert"><%= alert %></p>
-<%= yield %>
+	<%= yield %>
+</div>
 
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 </body>
 </html>
