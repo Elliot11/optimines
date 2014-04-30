@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<%# For Debugging %>
+<% if Rails.env == "development" %>
+   <%= params %>
+   <br>
+   <%= session %>
+<% end %>
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
 <%= yield %>
 
 </body>
