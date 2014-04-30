@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 
 group :production do
   gem 'pg'              #Heroku default database
-  #gem 'rails_12factor'  #Heroku Gem
+  gem 'rails_12factor'  #Heroku Gem
 end
 
 group :development do
