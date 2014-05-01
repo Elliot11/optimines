@@ -16,12 +16,21 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
     <%= f.label :lat %><br>
     <%= f.text_field :lat %>
   </div>
   <div class="field">
     <%= f.label :long %><br>
     <%= f.text_field :long %>
+  </div>
+    <div class="field">
+    <%= f.label :datetimestamp %><br>
+    <%= f.datetime_field :datetimestamp %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430213317) do
+ActiveRecord::Schema.define(version: 20140501130448) do
 
   create_table "trucks", force: true do |t|
     t.string   "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20140430213317) do
     t.float    "long"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "datetimestamp"
+    t.text     "description"
   end
 
 end

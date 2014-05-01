@@ -4,6 +4,11 @@
 </p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @truck.description %>
+</p>
+
+<p>
   <strong>Lat:</strong>
   <%= @truck.lat %>
 </p>
@@ -11,6 +16,12 @@
 <p>
   <strong>Long:</strong>
   <%= @truck.long %>
+</p>
+
+
+<p>
+  <strong>Datetimestamp:</strong>
+  <%= @truck.datetimestamp %>
 </p>
 
 <%= link_to 'Edit', edit_truck_path(@truck) %> |
