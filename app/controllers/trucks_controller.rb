@@ -16,7 +16,9 @@ class TrucksController < ApplicationController
     respond_to do |format|
       format.html 
       format.json
+      format.xml
       format.csv { send_data @trucks.to_csv }
+
     end
   end
 
