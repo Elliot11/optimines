@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'dashboard/overview'
+  #get 'dashboard/overview'
 
-  get 'dashboard/pit_controller'
+  #get 'dashboard/pit_controller'
 
-  get 'dashboard/optimisation'
+  #get 'dashboard/optimisation'
 
-  get 'dashboard/driver'
+  #get 'dashboard/driver'
 
-  get 'welcome/index'
+  #get 'welcome/index'
 
   resources :trucks do
     collection { post :import }
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root to: 'trucks#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
