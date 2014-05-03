@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  truck1: MyString
+  truck2: MyString
+  truck3: MyString
+  truck4: MyString
+  truck5: MyString
+  truck6: MyString
+  truck7: MyString
+  truck8: MyString
+
+two:
+  time: MyString
+  truck1: MyString
+  truck2: MyString
+  truck3: MyString
+  truck4: MyString
+  truck5: MyString
+  truck6: MyString
+  truck7: MyString
+  truck8: MyString

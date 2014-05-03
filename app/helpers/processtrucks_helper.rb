@@ -1,0 +1,2 @@
+module ProcesstrucksHelper
+end

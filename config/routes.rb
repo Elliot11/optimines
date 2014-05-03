@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :processtrucks do
+    collection { post :import }
+  end
+
   resources :loader_statuses do
     collection { post :import }
   end
@@ -6,17 +10,6 @@ Rails.application.routes.draw do
   resources :opt1s do
     collection { post :import }
   end
-  
-
-  #get 'dashboard/overview'
-
-  #get 'dashboard/pit_controller'
-
-  #get 'dashboard/optimisation'
-
-  #get 'dashboard/driver'
-
-  #get 'welcome/index'
 
   resources :trucks do
     collection { post :import }
