@@ -1,6 +1,7 @@
 xml.instruct!
 xml.kml(:xmlns => "http://www.opengis.net/kml/2.2") do 
   	@trucks.each do |placemark|
+  		xml.comment! "next placemark"
 	    xml.Placemark do
 	    	xml.name placemark.name
 	    	xml.description placemark.description
