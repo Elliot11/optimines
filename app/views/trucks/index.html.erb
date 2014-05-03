@@ -13,6 +13,14 @@
 
 <br>
 
+<%= form_tag("/trucks", method: "get") do %>
+  <%= label_tag(:datetimestamp, "Specify Time:") %>
+  <%= text_field_tag(:datetimestamp) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
 <table>
   <thead>
     <tr>
