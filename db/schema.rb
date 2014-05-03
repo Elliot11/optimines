@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501130448) do
+ActiveRecord::Schema.define(version: 20140503070442) do
+
+  create_table "opt1s", force: true do |t|
+    t.string   "truck"
+    t.string   "time"
+    t.string   "percentage"
+    t.string   "color"
+    t.string   "hidden"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "trucks", force: true do |t|
     t.string   "name"

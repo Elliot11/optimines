@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :opt1s do
+    collection { post :import }
+  end
+  
+
   #get 'dashboard/overview'
 
   #get 'dashboard/pit_controller'
