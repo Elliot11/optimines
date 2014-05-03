@@ -1,7 +1,7 @@
 class TrucksController < ApplicationController
   before_action :set_truck, only: [:show, :edit, :update, :destroy]
 
-  layout false
+  #layout false
 
   def import
     Truck.import(params[:file])
