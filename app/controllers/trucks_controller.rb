@@ -12,7 +12,12 @@ class TrucksController < ApplicationController
   # GET /trucks
   # GET /trucks.json
   def index
-    @trucks = Truck.all
+    if params[:datetimestamp].nil?
+      @trucks = Truck.all
+    else
+      @trucks = Truck.where(datetimestamp: params[:datetimestamp].to_datetime)
+    end
+        
     respond_to do |format|
       format.html 
       format.json
