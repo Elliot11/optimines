@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503070442) do
+ActiveRecord::Schema.define(version: 20140503134827) do
+
+  create_table "loader_statuses", force: true do |t|
+    t.string   "time"
+    t.string   "button1"
+    t.string   "button2"
+    t.string   "button3"
+    t.string   "button4"
+    t.string   "button5"
+    t.string   "button6"
+    t.string   "button7"
+    t.string   "button8"
+    t.string   "button9"
+    t.string   "button10"
+    t.string   "button11"
+    t.string   "button12"
+    t.string   "button13"
+    t.string   "button14"
+    t.string   "button15"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "opt1s", force: true do |t|
     t.string   "truck"

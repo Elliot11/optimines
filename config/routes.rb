@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :loader_statuses do
+    collection { post :import }
+  end
+
   resources :opt1s do
     collection { post :import }
   end
