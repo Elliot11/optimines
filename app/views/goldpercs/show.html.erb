@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @goldperc.time %>
+</p>
+
+<p>
+  <strong>Under shtd:</strong>
+  <%= @goldperc.under_shtd %>
+</p>
+
+<p>
+  <strong>Above shtd:</strong>
+  <%= @goldperc.above_shtd %>
+</p>
+
+<%= link_to 'Edit', edit_goldperc_path(@goldperc) %> |
+<%= link_to 'Back', goldpercs_path %>

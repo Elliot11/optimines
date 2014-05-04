@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
 
+  resources :goldpercs do
+    collection { post :import }
+  end
+
+  resources :goldpis do
+    collection { post :import }
+  end
+
+  resources :truckmetrics do
+    collection { post :import }
+  end
+
   resources :opttrucks do
     collection { post :import }
   end

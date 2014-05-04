@@ -1,0 +1,29 @@
+<%= form_for(@goldperc) do |f| %>
+  <% if @goldperc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goldperc.errors.count, "error") %> prohibited this goldperc from being saved:</h2>
+
+      <ul>
+      <% @goldperc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :under_shtd %><br>
+    <%= f.text_field :under_shtd %>
+  </div>
+  <div class="field">
+    <%= f.label :above_shtd %><br>
+    <%= f.text_field :above_shtd %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

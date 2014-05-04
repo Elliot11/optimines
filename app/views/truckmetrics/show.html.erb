@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @truckmetric.date %>
+</p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @truckmetric.equipment %>
+</p>
+
+<p>
+  <strong>Delays:</strong>
+  <%= @truckmetric.delays %>
+</p>
+
+<p>
+  <strong>Directoperating:</strong>
+  <%= @truckmetric.directoperating %>
+</p>
+
+<p>
+  <strong>Indirectoperating:</strong>
+  <%= @truckmetric.indirectoperating %>
+</p>
+
+<p>
+  <strong>Plannedmaintenance:</strong>
+  <%= @truckmetric.plannedmaintenance %>
+</p>
+
+<p>
+  <strong>Standby:</strong>
+  <%= @truckmetric.standby %>
+</p>
+
+<p>
+  <strong>Unplannedmaintenance:</strong>
+  <%= @truckmetric.unplannedmaintenance %>
+</p>
+
+<%= link_to 'Edit', edit_truckmetric_path(@truckmetric) %> |
+<%= link_to 'Back', truckmetrics_path %>

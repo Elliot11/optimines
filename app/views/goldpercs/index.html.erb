@@ -1,0 +1,51 @@
+<h1>Listing goldpercs</h1>
+
+
+<p>
+  <b>Download:</b>
+  <%= link_to "CSV", goldpercs_path(format: "csv") %>
+</p>
+
+  <b>Upload:</b>
+<%= form_tag import_goldpercs_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
+
+<%= form_tag("/goldpercs", method: "get") do %>
+  <%= label_tag(:datetimestamp, "Specify Time:") %>
+  <%= text_field_tag(:datetimestamp) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Under shtd</th>
+      <th>Above shtd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goldpercs.each do |goldperc| %>
+      <tr>
+        <td><%= goldperc.time %></td>
+        <td><%= goldperc.under_shtd %></td>
+        <td><%= goldperc.above_shtd %></td>
+        <td><%= link_to 'Show', goldperc %></td>
+        <td><%= link_to 'Edit', edit_goldperc_path(goldperc) %></td>
+        <td><%= link_to 'Destroy', goldperc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goldperc', new_goldperc_path %>

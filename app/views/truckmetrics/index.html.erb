@@ -1,0 +1,61 @@
+<h1>Listing truckmetrics</h1>
+
+
+<p>
+  <b>Download:</b>
+  <%= link_to "CSV", truckmetrics_path(format: "csv") %>
+</p>
+
+  <b>Upload:</b>
+<%= form_tag import_truckmetrics_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
+
+<%= form_tag("/truckmetrics", method: "get") do %>
+  <%= label_tag(:datetimestamp, "Specify Time:") %>
+  <%= text_field_tag(:datetimestamp) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Equipment</th>
+      <th>Delays</th>
+      <th>Directoperating</th>
+      <th>Indirectoperating</th>
+      <th>Plannedmaintenance</th>
+      <th>Standby</th>
+      <th>Unplannedmaintenance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @truckmetrics.each do |truckmetric| %>
+      <tr>
+        <td><%= truckmetric.date %></td>
+        <td><%= truckmetric.equipment %></td>
+        <td><%= truckmetric.delays %></td>
+        <td><%= truckmetric.directoperating %></td>
+        <td><%= truckmetric.indirectoperating %></td>
+        <td><%= truckmetric.plannedmaintenance %></td>
+        <td><%= truckmetric.standby %></td>
+        <td><%= truckmetric.unplannedmaintenance %></td>
+        <td><%= link_to 'Show', truckmetric %></td>
+        <td><%= link_to 'Edit', edit_truckmetric_path(truckmetric) %></td>
+        <td><%= link_to 'Destroy', truckmetric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Truckmetric', new_truckmetric_path %>

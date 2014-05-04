@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504015014) do
+ActiveRecord::Schema.define(version: 20140504060150) do
+
+  create_table "goldpercs", force: true do |t|
+    t.string   "time"
+    t.string   "under_shtd"
+    t.string   "above_shtd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "goldpis", force: true do |t|
+    t.string   "label"
+    t.string   "value"
+    t.string   "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "loader_statuses", force: true do |t|
     t.string   "time"
@@ -70,6 +86,19 @@ ActiveRecord::Schema.define(version: 20140504015014) do
     t.string   "truck6"
     t.string   "truck7"
     t.string   "truck8"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "truckmetrics", force: true do |t|
+    t.string   "date"
+    t.string   "equipment"
+    t.string   "delays"
+    t.string   "directoperating"
+    t.string   "indirectoperating"
+    t.string   "plannedmaintenance"
+    t.string   "standby"
+    t.string   "unplannedmaintenance"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

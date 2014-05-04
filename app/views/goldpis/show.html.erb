@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @goldpi.label %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @goldpi.value %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @goldpi.time %>
+</p>
+
+<%= link_to 'Edit', edit_goldpi_path(@goldpi) %> |
+<%= link_to 'Back', goldpis_path %>

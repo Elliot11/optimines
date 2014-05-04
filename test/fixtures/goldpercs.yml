@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  under_shtd: MyString
+  above_shtd: MyString
+
+two:
+  time: MyString
+  under_shtd: MyString
+  above_shtd: MyString

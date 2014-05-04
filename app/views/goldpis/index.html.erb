@@ -1,0 +1,51 @@
+<h1>Listing goldpis</h1>
+
+
+<p>
+  <b>Download:</b>
+  <%= link_to "CSV", goldpis_path(format: "csv") %>
+</p>
+
+  <b>Upload:</b>
+<%= form_tag import_goldpis_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
+
+<%= form_tag("/goldpis", method: "get") do %>
+  <%= label_tag(:datetimestamp, "Specify Time:") %>
+  <%= text_field_tag(:datetimestamp) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Value</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goldpis.each do |goldpi| %>
+      <tr>
+        <td><%= goldpi.label %></td>
+        <td><%= goldpi.value %></td>
+        <td><%= goldpi.time %></td>
+        <td><%= link_to 'Show', goldpi %></td>
+        <td><%= link_to 'Edit', edit_goldpi_path(goldpi) %></td>
+        <td><%= link_to 'Destroy', goldpi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goldpi', new_goldpi_path %>
