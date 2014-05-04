@@ -1,0 +1,51 @@
+<h1>Listing optloaders</h1>
+
+<p>
+  <b>Download:</b>
+  <%= link_to "CSV", optloaders_path(format: "csv") %>
+</p>
+
+  <b>Upload:</b>
+<%= form_tag import_optloaders_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
+
+<%= form_tag("/optloaders", method: "get") do %>
+  <%= label_tag(:datetimestamp, "Specify Time:") %>
+  <%= text_field_tag(:datetimestamp) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Truck</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @optloaders.each do |optloader| %>
+      <tr>
+        <td><%= optloader.time %></td>
+        <td><%= optloader.truck %></td>
+        <td><%= optloader.color %></td>
+        <td><%= link_to 'Show', optloader %></td>
+        <td><%= link_to 'Edit', edit_optloader_path(optloader) %></td>
+        <td><%= link_to 'Destroy', optloader, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Optloader', new_optloader_path %>

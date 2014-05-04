@@ -3,7 +3,7 @@ class LoaderStatusesController < ApplicationController
 
   def import
     LoaderStatus.import(params[:file])
-    redirect_to Loader_Statuses_path, notice: "Products imported."
+    redirect_to loader_statuses_path, notice: "Products imported."
   end
 
 

@@ -1,0 +1,29 @@
+<%= form_for(@optloader) do |f| %>
+  <% if @optloader.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@optloader.errors.count, "error") %> prohibited this optloader from being saved:</h2>
+
+      <ul>
+      <% @optloader.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :truck %><br>
+    <%= f.text_field :truck %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
