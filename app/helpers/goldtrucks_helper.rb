@@ -1,0 +1,2 @@
+module GoldtrucksHelper
+end

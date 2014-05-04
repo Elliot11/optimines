@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504060150) do
+ActiveRecord::Schema.define(version: 20140504062017) do
+
+  create_table "goldmeasures", force: true do |t|
+    t.string   "time"
+    t.string   "total_shtd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "goldpercs", force: true do |t|
     t.string   "time"
@@ -25,6 +32,37 @@ ActiveRecord::Schema.define(version: 20140504060150) do
     t.string   "label"
     t.string   "value"
     t.string   "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "goldtrucks", force: true do |t|
+    t.string   "time"
+    t.string   "t1"
+    t.string   "t2"
+    t.string   "t3"
+    t.string   "t4"
+    t.string   "t5"
+    t.string   "t6"
+    t.string   "t7"
+    t.string   "t8"
+    t.string   "t9"
+    t.string   "t10"
+    t.string   "t11"
+    t.string   "t12"
+    t.string   "t13"
+    t.string   "t14"
+    t.string   "t15"
+    t.string   "t16"
+    t.string   "t17"
+    t.string   "t18"
+    t.string   "t19"
+    t.string   "t20"
+    t.string   "t21"
+    t.string   "t22"
+    t.string   "t23"
+    t.string   "t24"
+    t.string   "t25"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

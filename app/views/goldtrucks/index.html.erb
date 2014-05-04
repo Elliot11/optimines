@@ -1,0 +1,96 @@
+<h1>Listing goldtrucks</h1>
+
+<p>
+  <b>Download:</b>
+  <%= link_to "CSV", goldtrucks_path(format: "csv") %>
+</p>
+
+  <b>Upload:</b>
+<%= form_tag import_goldtrucks_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
+
+<%= form_tag("/goldtrucks", method: "get") do %>
+  <%= label_tag(:datetimestamp, "Specify Time:") %>
+  <%= text_field_tag(:datetimestamp) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>T1</th>
+      <th>T2</th>
+      <th>T3</th>
+      <th>T4</th>
+      <th>T5</th>
+      <th>T6</th>
+      <th>T7</th>
+      <th>T8</th>
+      <th>T9</th>
+      <th>T10</th>
+      <th>T11</th>
+      <th>T12</th>
+      <th>T13</th>
+      <th>T14</th>
+      <th>T15</th>
+      <th>T16</th>
+      <th>T17</th>
+      <th>T18</th>
+      <th>T19</th>
+      <th>T20</th>
+      <th>T21</th>
+      <th>T22</th>
+      <th>T23</th>
+      <th>T24</th>
+      <th>T25</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goldtrucks.each do |goldtruck| %>
+      <tr>
+        <td><%= goldtruck.time %></td>
+        <td><%= goldtruck.t1 %></td>
+        <td><%= goldtruck.t2 %></td>
+        <td><%= goldtruck.t3 %></td>
+        <td><%= goldtruck.t4 %></td>
+        <td><%= goldtruck.t5 %></td>
+        <td><%= goldtruck.t6 %></td>
+        <td><%= goldtruck.t7 %></td>
+        <td><%= goldtruck.t8 %></td>
+        <td><%= goldtruck.t9 %></td>
+        <td><%= goldtruck.t10 %></td>
+        <td><%= goldtruck.t11 %></td>
+        <td><%= goldtruck.t12 %></td>
+        <td><%= goldtruck.t13 %></td>
+        <td><%= goldtruck.t14 %></td>
+        <td><%= goldtruck.t15 %></td>
+        <td><%= goldtruck.t16 %></td>
+        <td><%= goldtruck.t17 %></td>
+        <td><%= goldtruck.t18 %></td>
+        <td><%= goldtruck.t19 %></td>
+        <td><%= goldtruck.t20 %></td>
+        <td><%= goldtruck.t21 %></td>
+        <td><%= goldtruck.t22 %></td>
+        <td><%= goldtruck.t23 %></td>
+        <td><%= goldtruck.t24 %></td>
+        <td><%= goldtruck.t25 %></td>
+        <td><%= link_to 'Show', goldtruck %></td>
+        <td><%= link_to 'Edit', edit_goldtruck_path(goldtruck) %></td>
+        <td><%= link_to 'Destroy', goldtruck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goldtruck', new_goldtruck_path %>

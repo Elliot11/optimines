@@ -1,0 +1,25 @@
+<%= form_for(@goldmeasure) do |f| %>
+  <% if @goldmeasure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@goldmeasure.errors.count, "error") %> prohibited this goldmeasure from being saved:</h2>
+
+      <ul>
+      <% @goldmeasure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :total_shtd %><br>
+    <%= f.text_field :total_shtd %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  t1: MyString
+  t2: MyString
+  t3: MyString
+  t4: MyString
+  t5: MyString
+  t6: MyString
+  t7: MyString
+  t8: MyString
+  t9: MyString
+  t10: MyString
+  t11: MyString
+  t12: MyString
+  t13: MyString
+  t14: MyString
+  t15: MyString
+  t16: MyString
+  t17: MyString
+  t18: MyString
+  t19: MyString
+  t20: MyString
+  t21: MyString
+  t22: MyString
+  t23: MyString
+  t24: MyString
+  t25: MyString
+
+two:
+  time: MyString
+  t1: MyString
+  t2: MyString
+  t3: MyString
+  t4: MyString
+  t5: MyString
+  t6: MyString
+  t7: MyString
+  t8: MyString
+  t9: MyString
+  t10: MyString
+  t11: MyString
+  t12: MyString
+  t13: MyString
+  t14: MyString
+  t15: MyString
+  t16: MyString
+  t17: MyString
+  t18: MyString
+  t19: MyString
+  t20: MyString
+  t21: MyString
+  t22: MyString
+  t23: MyString
+  t24: MyString
+  t25: MyString
