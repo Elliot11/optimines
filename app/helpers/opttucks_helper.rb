@@ -1,0 +1,2 @@
+module OpttucksHelper
+end

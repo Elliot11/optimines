@@ -1,0 +1,29 @@
+<h1>Listing opttucks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Truck</th>
+      <th>Time</th>
+      <th>Percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @opttucks.each do |opttuck| %>
+      <tr>
+        <td><%= opttuck.truck %></td>
+        <td><%= opttuck.time %></td>
+        <td><%= opttuck.percentage %></td>
+        <td><%= link_to 'Show', opttuck %></td>
+        <td><%= link_to 'Edit', edit_opttuck_path(opttuck) %></td>
+        <td><%= link_to 'Destroy', opttuck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Opttuck', new_opttuck_path %>
