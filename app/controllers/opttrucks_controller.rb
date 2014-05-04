@@ -11,7 +11,7 @@ class OpttrucksController < ApplicationController
   # GET /opttrucks.json
   def index
     @opttrucks = Opttruck.all
-
+    @shortopttrucks = Opttruck.first(100)
     
     respond_to do |format|
       format.html 

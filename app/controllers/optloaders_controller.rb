@@ -10,6 +10,7 @@ class OptloadersController < ApplicationController
   # GET /optloaders.json
   def index
     @optloaders = Optloader.all
+    @shortoptloaders = Optloader.first(100)
 
     respond_to do |format|
       format.html 
