@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :opttucks
+
+
+  resources :opttrucks do
+    collection { post :import }
+  end
 
   resources :optloaders do
     collection { post :import }

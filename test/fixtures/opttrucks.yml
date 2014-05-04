@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  truck: MyString
+  time: MyString
+  percentage: MyString
+
+two:
+  truck: MyString
+  time: MyString
+  percentage: MyString

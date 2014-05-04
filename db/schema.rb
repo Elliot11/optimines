@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504003129) do
+ActiveRecord::Schema.define(version: 20140504015014) do
 
   create_table "loader_statuses", force: true do |t|
     t.string   "time"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20140504003129) do
     t.datetime "updated_at"
   end
 
-  create_table "opttucks", force: true do |t|
+  create_table "opttrucks", force: true do |t|
     t.string   "truck"
     t.string   "time"
     t.string   "percentage"

@@ -1,0 +1,29 @@
+<%= form_for(@opttruck) do |f| %>
+  <% if @opttruck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@opttruck.errors.count, "error") %> prohibited this opttruck from being saved:</h2>
+
+      <ul>
+      <% @opttruck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :truck %><br>
+    <%= f.text_field :truck %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :percentage %><br>
+    <%= f.text_field :percentage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

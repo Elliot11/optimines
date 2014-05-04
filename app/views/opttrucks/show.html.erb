@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Truck:</strong>
+  <%= @opttruck.truck %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @opttruck.time %>
+</p>
+
+<p>
+  <strong>Percentage:</strong>
+  <%= @opttruck.percentage %>
+</p>
+
+<%= link_to 'Edit', edit_opttruck_path(@opttruck) %> |
+<%= link_to 'Back', opttrucks_path %>
