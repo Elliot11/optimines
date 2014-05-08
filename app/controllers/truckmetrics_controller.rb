@@ -13,10 +13,8 @@ class TruckmetricsController < ApplicationController
     if params[:datetimestamp].nil?
     @truckmetrics = Truckmetric.all
     else
-    @truckmetrics = Truckmetric.where(date: params[:datetimestamp].to_s)
+    @truckmetrics = Truckmetric.where(date: params[:datetimestamp].to_datetime)
     end
-
-    @jsontruckmetrics = Truckmetric.where(date: '1/03/2014')
 
     respond_to do |format|
       format.html 
@@ -88,6 +86,6 @@ class TruckmetricsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def truckmetric_params
-      params.require(:truckmetric).permit(:date, :equipment, :delays, :directoperating, :indirectoperating, :plannedmaintenance, :standby, :unplannedmaintenance)
+      params.require(:truckmetric).permit(:date, :equipment, :status_category, :duration)
     end
 end

@@ -6,18 +6,18 @@ class DashboardControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get pit_controller" do
-    get :pit_controller
+  test "should get loaderoptimisation" do
+    get :loaderoptimisation
     assert_response :success
   end
 
-  test "should get optimisation" do
-    get :optimisation
+  test "should get goldtracking" do
+    get :goldtracking
     assert_response :success
   end
 
-  test "should get driver" do
-    get :driver
+  test "should get assetmetrics" do
+    get :assetmetrics
     assert_response :success
   end
 

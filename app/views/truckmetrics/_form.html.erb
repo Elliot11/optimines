@@ -20,28 +20,12 @@
     <%= f.text_field :equipment %>
   </div>
   <div class="field">
-    <%= f.label :delays %><br>
-    <%= f.text_field :delays %>
+    <%= f.label :status_category %><br>
+    <%= f.text_field :status_category %>
   </div>
   <div class="field">
-    <%= f.label :directoperating %><br>
-    <%= f.text_field :directoperating %>
-  </div>
-  <div class="field">
-    <%= f.label :indirectoperating %><br>
-    <%= f.text_field :indirectoperating %>
-  </div>
-  <div class="field">
-    <%= f.label :plannedmaintenance %><br>
-    <%= f.text_field :plannedmaintenance %>
-  </div>
-  <div class="field">
-    <%= f.label :standby %><br>
-    <%= f.text_field :standby %>
-  </div>
-  <div class="field">
-    <%= f.label :unplannedmaintenance %><br>
-    <%= f.text_field :unplannedmaintenance %>
+    <%= f.label :duration %><br>
+    <%= f.date_field :duration %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'chartkick'
+gem 'groupdate'
+
 group :production do
   gem 'pg'              #Heroku default database
   gem 'rails_12factor'  #Heroku Gem

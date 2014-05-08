@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504062017) do
+ActiveRecord::Schema.define(version: 20140507231527) do
 
   create_table "goldmeasures", force: true do |t|
     t.string   "time"
@@ -129,16 +129,12 @@ ActiveRecord::Schema.define(version: 20140504062017) do
   end
 
   create_table "truckmetrics", force: true do |t|
-    t.string   "date"
     t.string   "equipment"
-    t.string   "delays"
-    t.string   "directoperating"
-    t.string   "indirectoperating"
-    t.string   "plannedmaintenance"
-    t.string   "standby"
-    t.string   "unplannedmaintenance"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status_category"
+    t.string   "duration"
+    t.datetime "date"
   end
 
   create_table "trucks", force: true do |t|

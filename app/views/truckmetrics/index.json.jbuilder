@@ -1,11 +1,8 @@
-json.array!(@jsontruckmetrics) do |truckmetric|
+json.array!(@truckmetrics) do |truckmetric|
 json.array do
-	json.delays truckmetric.delays
-	json.directoperating truckmetric.directoperating
-	json.indirectoperating truckmetric.indirectoperating
-	json.plannedmaintenance truckmetric.plannedmaintenance
-	json.standby truckmetric.plannedmaintenance
-	json.unplannedmaintenance truckmetric.unplannedmaintenance
+	json.date truckmetric.date
+	json.status_category truckmetric.status_category
+	json.equipment truckmetric.equipment
+	json.duration truckmetric.duration
 	end
-
 end

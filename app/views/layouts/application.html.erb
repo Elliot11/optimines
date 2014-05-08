@@ -3,50 +3,47 @@
 <head>
   <title>Optimines</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%# javascript_include_tag 'application' %>
-  <%# csrf_meta_tags %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="wrapper">
 <%# For Debugging %>
 
-<% if params[:controller] == "dashboard" %>
-	<%= render 'layouts/navigation' %>
-<% end %>
+<%= render 'layouts/navigation' %>
 
-	<% if Rails.env == "development" %>
+<% if Rails.env == "development" %>
    <%= params %>
    <br>
    <%= session %>
+   <hr>
+    <%= link_to "Opt1s", opt1s_path %>
+    <%= link_to "Opt Loader", optloaders_path %>
+    <%= link_to "Opt Trucks", opttrucks_path %>
+    <%= link_to "Truck Metrics", truckmetrics_path %>
+    <%= link_to "Gold Pi", goldpis_path %>
+    <%= link_to "Gold Percentage", goldpercs_path %>
+    <%= link_to "Gold Measures", goldmeasures_path %>
+    <%= link_to "Gold Trucks", goldtrucks_path %>
 <% end %>
 <p id="notice"><%= notice %></p>
 <p id="alert"><%= alert %></p>
 
 
+<%= yield %>
+
 <%# = link_to "Trucks", trucks_path %>
-
-<%= link_to "Opt1s", opt1s_path %>
-
-<%= link_to "Opt Loader", optloaders_path %>
-
-<%= link_to "Opt Trucks", opttrucks_path %>
-
-<%= link_to "Truck Metrics", truckmetrics_path %>
-
-<%= link_to "Gold Pi", goldpis_path %>
-
-<%= link_to "Gold Percentage", goldpercs_path %>
-
-<%= link_to "Gold Measures", goldmeasures_path %>
-
-<%= link_to "Gold Trucks", goldtrucks_path %>
-
 <%# = link_to "Loader Statuses", loader_statuses_path %>
-
 <%# = link_to "Process Trucks", processtrucks_path %>
 
-	<%= yield %>
+</div>
+
+
+
+	
 
 
 </body>
+
+
 </html>

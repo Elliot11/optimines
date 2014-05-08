@@ -1,0 +1,17 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<div class="col-sm-4">
+<%= pie_chart Truckmetric.where(date: "2014-03-01".to_datetime, equipment: "TR021").group(:status_category).sum(:duration), library: {title: "TR021", legend: "none"}
+ %>
+</div>
+<div class="col-sm-4">
+<%= pie_chart Truckmetric.where(date: "2014-03-01".to_datetime, equipment: "TR022").group(:status_category).sum(:duration), library: {title: "TR022", legend: "none"}
+ %>
+ </div>
+<div class="col-sm-4">
+ <%= pie_chart Truckmetric.where(date: "2014-03-01".to_datetime, equipment: "TR025").group(:status_category).sum(:duration), library: {title: "TR025", legend: "none"}
+ %>
+ </div>
+<div class="col-sm-4">
+ <%= pie_chart Truckmetric.where(date: "2014-03-01".to_datetime, equipment: "TR026").group(:status_category).sum(:duration), library: {title: "TR026", legend: "none"}
+ %>
+</div>

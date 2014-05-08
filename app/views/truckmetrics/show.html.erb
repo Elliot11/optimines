@@ -11,34 +11,15 @@
 </p>
 
 <p>
-  <strong>Delays:</strong>
-  <%= @truckmetric.delays %>
+  <strong>Status Category:</strong>
+  <%= @truckmetric.status_category %>
 </p>
 
 <p>
-  <strong>Directoperating:</strong>
-  <%= @truckmetric.directoperating %>
+  <strong>Duration:</strong>
+  <%= @truckmetric.duration %>
 </p>
 
-<p>
-  <strong>Indirectoperating:</strong>
-  <%= @truckmetric.indirectoperating %>
-</p>
-
-<p>
-  <strong>Plannedmaintenance:</strong>
-  <%= @truckmetric.plannedmaintenance %>
-</p>
-
-<p>
-  <strong>Standby:</strong>
-  <%= @truckmetric.standby %>
-</p>
-
-<p>
-  <strong>Unplannedmaintenance:</strong>
-  <%= @truckmetric.unplannedmaintenance %>
-</p>
 
 <%= link_to 'Edit', edit_truckmetric_path(@truckmetric) %> |
 <%= link_to 'Back', truckmetrics_path %>
