@@ -1,2 +1,94 @@
-<h1>Dashboard#goldtracking</h1>
-<p>Find me in app/views/dashboard/goldtracking.html.erb</p>
+<center><h3>Contained Metal (Au)</h3></center>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <h4>Legend:</h4>
+                    <p style="background-color:#FF0000; color: white;">Low Grade</p>
+                    <p style="background-color:#0000FF; color: white;">Mid Grade</p>
+                    <p style="background-color:#00FF00">High Grade</p>
+                </div>
+                <div class="col-md-7">
+                    <h4>Feed Sources</h4>
+                    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+                    <%= pie_chart Goldpi.where(time: "16").group(:label).sum(:value) %>
+                </div>
+                <div class="col-md-2">
+                    <h4>Percentage Underground: 87%</h4>
+                    <h4>Percentage Above Ground: 13%</h4>
+                    <h4>Total Contained Metal: 2100Oz</h4>
+                </div>
+            </div>
+
+
+            <br><br>
+            <center><h3>Last Five Trucks Grade Referance</h3></center><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <h4>Argo</h4>
+                </div>
+            </div>
+			<div class="row" style="padding-left:25px; padding-right:25px">
+                <div class="col-md-1"></div>
+                <div style="height:50px; border-radius:15px" id="1" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="2" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="3" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="4" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="5" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+            <h4>Athena</h4>
+                    </div>
+                </div>
+            <div class="row" style="padding-left:25px; padding-right:25px">
+                <div class="col-md-1"></div>
+                <div style="height:50px; border-radius:15px" id="6" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="7" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="8" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="9" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="10" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+            <h4>Bellephron</h4>
+                    </div>
+                </div>
+            <div class="row" style="padding-left:25px; padding-right:25px">
+                <div class="col-md-1"></div>
+                <div style="height:50px; border-radius:15px" id="11" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="12" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="13" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="14" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="15" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+            <h4>Cave Rocks</h4>
+                    </div>
+                </div>
+            <div class="row" style="padding-left:25px; padding-right:25px">
+                <div class="col-md-1"></div>
+                <div style="height:50px; border-radius:15px" id="16" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="17" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="18" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="19" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="20" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+            <h4>Hamlet</h4>
+                    </div>
+                </div>
+            <div class="row" style="padding-left:25px; padding-right:25px">
+                <div class="col-md-1"></div>
+                <div style="height:50px; border-radius:15px" id="21" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="22" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="23" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="24" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+                <div style="height:50px; border-radius:15px" id="25" class="col-md-2"><img src="http://www.immersivetechnologies.com/images/products/icon_truck.png" style="max-height:100%; max-width:100%"></div>
+            </div>

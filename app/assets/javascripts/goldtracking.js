@@ -1,0 +1,28 @@
+$(window).load(function(){
+    $("#1").css("background-color","#00FF00");
+    $("#2").css("background-color","#FF0000");
+    $("#3").css("background-color","#00FF00");
+    $("#4").css("background-color","#0000FF");
+    $("#5").css("background-color","#00FF00");
+    $("#6").css("background-color","#00FF00");
+    $("#7").css("background-color","#FF0000");
+    $("#8").css("background-color","#0000FF");
+    $("#9").css("background-color","#00FF00");
+    $("#10").css("background-color","#0000FF");
+    $("#11").css("background-color","#FF0000");
+    $("#12").css("background-color","#0000FF");
+    $("#13").css("background-color","#00FF00");
+    $("#14").css("background-color","#00FF00");
+    $("#15").css("background-color","#0000FF");
+    $("#16").css("background-color","#0000FF");
+    $("#17").css("background-color","#FF0000");
+    $("#18").css("background-color","#00FF00");
+    $("#19").css("background-color","#FF0000");
+    $("#20").css("background-color","#00FF00");
+    $("#21").css("background-color","#0000FF");
+    $("#22").css("background-color","#0000FF");
+    $("#23").css("background-color","#00FF00");
+    $("#24").css("background-color","#FF0000");
+    $("#25").css("background-color","#00FF00");
+    
+});
