@@ -13,22 +13,22 @@ class Changestringstofloat < ActiveRecord::Migration
 
   create_table "goldmeasures", force: true do |t|
     t.integer   "time"
-    t.float   "total_shtd"
+    t.float   "total_shtd", limit: 50
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "goldpercs", force: true do |t|
     t.integer   "time"
-    t.float   "under_shtd"
-    t.float   "above_shtd"
+    t.float   "under_shtd", limit: 50
+    t.float   "above_shtd", limit: 50
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "goldpis", force: true do |t|
     t.string   "label"
-    t.float    "value",      limit: 255
+    t.float    "value",      limit: 50
     t.integer   "time"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -71,7 +71,7 @@ class Changestringstofloat < ActiveRecord::Migration
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status_category"
-    t.float   "duration"
+    t.float   "duration", limit: 50
     t.datetime "date"
   end
 
