@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510013622) do
+ActiveRecord::Schema.define(version: 20140510035456) do
 
   create_table "goldmeasures", force: true do |t|
-    t.string   "time"
-    t.string   "total_shtd"
+    t.integer  "time"
+    t.float    "total_shtd"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "goldpercs", force: true do |t|
-    t.string   "time"
-    t.string   "under_shtd"
-    t.string   "above_shtd"
+    t.integer  "time"
+    t.float    "under_shtd"
+    t.float    "above_shtd"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,69 +31,38 @@ ActiveRecord::Schema.define(version: 20140510013622) do
   create_table "goldpis", force: true do |t|
     t.string   "label"
     t.float    "value",      limit: 255
-    t.string   "time"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "goldtrucks", force: true do |t|
-    t.string   "time"
-    t.string   "t1"
-    t.string   "t2"
-    t.string   "t3"
-    t.string   "t4"
-    t.string   "t5"
-    t.string   "t6"
-    t.string   "t7"
-    t.string   "t8"
-    t.string   "t9"
-    t.string   "t10"
-    t.string   "t11"
-    t.string   "t12"
-    t.string   "t13"
-    t.string   "t14"
-    t.string   "t15"
-    t.string   "t16"
-    t.string   "t17"
-    t.string   "t18"
-    t.string   "t19"
-    t.string   "t20"
-    t.string   "t21"
-    t.string   "t22"
-    t.string   "t23"
-    t.string   "t24"
-    t.string   "t25"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "loader_statuses", force: true do |t|
-    t.string   "time"
-    t.string   "button1"
-    t.string   "button2"
-    t.string   "button3"
-    t.string   "button4"
-    t.string   "button5"
-    t.string   "button6"
-    t.string   "button7"
-    t.string   "button8"
-    t.string   "button9"
-    t.string   "button10"
-    t.string   "button11"
-    t.string   "button12"
-    t.string   "button13"
-    t.string   "button14"
-    t.string   "button15"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "opt1s", force: true do |t|
-    t.string   "truck"
-    t.string   "time"
-    t.string   "percentage"
-    t.string   "color"
-    t.string   "hidden"
+    t.integer  "time"
+    t.boolean  "t1"
+    t.boolean  "t2"
+    t.boolean  "t3"
+    t.boolean  "t4"
+    t.boolean  "t5"
+    t.boolean  "t6"
+    t.boolean  "t7"
+    t.boolean  "t8"
+    t.boolean  "t9"
+    t.boolean  "t10"
+    t.boolean  "t11"
+    t.boolean  "t12"
+    t.boolean  "t13"
+    t.boolean  "t14"
+    t.boolean  "t15"
+    t.boolean  "t16"
+    t.boolean  "t17"
+    t.boolean  "t18"
+    t.boolean  "t19"
+    t.boolean  "t20"
+    t.boolean  "t21"
+    t.boolean  "t22"
+    t.boolean  "t23"
+    t.boolean  "t24"
+    t.boolean  "t25"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -114,37 +83,13 @@ ActiveRecord::Schema.define(version: 20140510013622) do
     t.datetime "updated_at"
   end
 
-  create_table "processtrucks", force: true do |t|
-    t.string   "time"
-    t.string   "truck1"
-    t.string   "truck2"
-    t.string   "truck3"
-    t.string   "truck4"
-    t.string   "truck5"
-    t.string   "truck6"
-    t.string   "truck7"
-    t.string   "truck8"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "truckmetrics", force: true do |t|
     t.string   "equipment"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status_category"
-    t.string   "duration"
+    t.float    "duration"
     t.datetime "date"
-  end
-
-  create_table "trucks", force: true do |t|
-    t.string   "name"
-    t.float    "lat"
-    t.float    "long"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "datetimestamp"
-    t.text     "description"
   end
 
 end
