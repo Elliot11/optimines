@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507231527) do
+ActiveRecord::Schema.define(version: 20140510013622) do
 
   create_table "goldmeasures", force: true do |t|
     t.string   "time"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20140507231527) do
 
   create_table "goldpis", force: true do |t|
     t.string   "label"
-    t.string   "value"
+    t.float    "value",      limit: 255
     t.string   "time"
     t.datetime "created_at"
     t.datetime "updated_at"
