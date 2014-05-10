@@ -1,132 +1,156 @@
-                <br>
-        <div class="row">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-xs-4">
-                <center><button id="button1" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>EX122</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button2" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>EX125</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button3" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>EX132</h4>
-                </center>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-xs-4">
-                <center><button id="button4" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LD039</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button5" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LD045</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button6" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LD047</h4>
-                </center>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-xs-4">
-                <center><button id="button7" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LD048</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button8" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LD049</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button9" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDB009</h4>
-                </center>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-xs-4">
-                <center><button id="button10" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDB055</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button11" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDB056</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button12" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDB059</h4>
-                </center>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-xs-4">
-                <center><button id="button13" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDM0195</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button14" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDM0198</h4>
-                </center>
-              </div>
-              <div class="col-xs-4">
-                <center><button id="button15" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
-                  <%= image_tag "digger.png", width: "100%" %>
-                  </button>
-                  <h4>LDM0201</h4>
-                </center>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="row">
+<div class="row">
+  <div class="col-md-12">
+    <h1>Loader Optimisation</h1>
+    <p>Truck and loader utilisation is a critical metric in determining pit performance. If trucks are getting to the loader and queuing behind other trucks then time and energy is being wasted. These metrics are designed to help determine loader utilisation and help allocate trucks efficiently to loaders. <p>
+    <p>In this example this is done through evaluation of queuing time at the loaders. This is made more difficult as this is not exlicitly captured in the time statistics for trucks due to the manual nature of logging events. A work around was developed that compared the cycle time to an average time for the distance. We could then compare queuing times at different loaders and determine their status as overloaded, underloaded or balanced. </p>
+    <p>We also attempted to visualise the trucks in their cycle to help determine interactions. Even if an appropriate number of trucks are allocated to a loader, truck queuing can still occur if the trucks are not spaced correctly. You can get to this screen by clicking on a loader, this is still a work in progress. 
+    </p>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-1">
+  </div>
+  <div class="col-xs-6">
+    <table class="table table-condensed">
+      <tr>
+        <td class="success">Balanced</td>
+        <td class="warning">Underloaded</td>
+        <td class="danger">Overloaded</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-xs-4">
+        <center><button id="button1" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>EX122</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button2" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>EX125</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button3" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>EX132</h4>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-4">
+        <center><button id="button4" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LD039</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button5" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LD045</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button6" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LD047</h4>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-4">
+        <center><button id="button7" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LD048</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button8" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LD049</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button9" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDB009</h4>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-4">
+        <center><button id="button10" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDB055</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button11" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDB056</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button12" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDB059</h4>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-4">
+        <center><button id="button13" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDM0195</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button14" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDM0198</h4>
+        </center>
+      </div>
+      <div class="col-xs-4">
+        <center><button id="button15" class="btn btn-default btn-lg" data-toggle="modal" data-target="#Modal1" style="width:60%">
+          <%= image_tag "digger.png", width: "100%" %>
+          </button>
+          <h4>LDM0201</h4>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="row">
                     
-                </div>
-                <br>
-                <br>
+    </div>
+    <br>
+    <br>
 
     <style>
       .blue {

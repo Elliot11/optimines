@@ -1,3 +1,6 @@
+<h1>Asset Metrics</h1>
+<p>These asset metrics provide information on delays, direct operating, indirect operating, planned maintenance, standby and unplanned maintenance. This information is provided for TR equipment codes. </p>
+
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <div class="col-sm-4">
 <%= pie_chart Truckmetric.where(date: "2014-03-01".to_datetime, equipment: "TR021").group(:status_category).sum(:duration), library: {title: "TR021", legend: "none"}
